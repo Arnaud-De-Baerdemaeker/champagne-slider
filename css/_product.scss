@@ -1,0 +1,58 @@
+.product-card { // <div>
+	max-width: 35rem;
+	max-height: 30rem;
+	// position: relative;
+	// margin-right: auto;
+	// margin-left: auto;
+
+	&__wrapper { // <div>
+		padding: 2rem 2rem 2rem 3rem;
+		display: flex;
+	}
+
+	&__infos { // <div>
+		width: 70%;
+	}
+
+	&__date { // <p>
+		font-family: ivypresto-text, serif;
+		font-size: 4.5rem;
+		font-style: italic;
+		color: $white;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	&__title { // <h3>, <h4>
+		font-size: 2.5rem;
+		font-weight: 400;
+		margin-top: 2rem;
+		margin-bottom: 0;
+
+		& + h4 {
+			font-style: italic;
+			margin-top: 0;
+		}
+	}
+
+	&__composition { // <p>
+		font-family: azo-sans-web, sans-serif;
+		font-size: 1.4rem;
+		margin-bottom: 2.4rem;
+	}
+	
+	&__image { // <div
+		width: 30%;
+		margin-bottom: -15%;
+
+		img {
+			width: 100%;
+			position: relative;
+			top: 10%;
+		}
+	}
+
+	&.dark {
+		color: $white;
+	}
+}
