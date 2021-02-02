@@ -11,7 +11,7 @@
     	<title>Document</title>
 	</head>
 	
-	<body>
+	<body class="dark_mode"> <!-- Delete class "dark_mode" for light mode -->
 		<script src="https://use.fontawesome.com/c3352fdb8d.js"></script>
 
 		<ul class="product-list">
@@ -105,7 +105,7 @@
 
 			<div class="product-card">
 				<div class="product-card__container">
-					<div class="product-card__wrapper gray">
+					<div class="product-card__wrapper beige">
 						<div class="product-card__infos">
 							<p class="product-card__date hide">2012</p>
 							<h3 class="product-card__title">Germar Breton</h3>
@@ -221,6 +221,7 @@
 					gsap.to(".slick-active .ingredients-list__item", {duration: 0.3, y: 0, opacity: 1, stagger: 0.1});
 					gsap.to(".slick-active .product-card__title", {duration: 0.3, y: 0, opacity: 1, stagger: 0.1});
 				});
+
 			});
 		</script>
 	</body>

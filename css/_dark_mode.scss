@@ -1,0 +1,18 @@
+body.dark_mode{
+	background: black !important;
+	background-image: none !important;
+	
+	//Button
+	.button{
+		color: white;
+	}
+
+
+	.slick-arrow::before {
+		color: white;
+	}
+
+	.black {
+		background-color: #232323;
+	}
+}
