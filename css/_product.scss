@@ -1,20 +1,64 @@
-.product-card { // <div>
-	max-width: 35rem;
-	max-height: 30rem;
-	// position: relative;
-	// margin-right: auto;
-	// margin-left: auto;
+body {
+	margin: 0 0 0 0;
+	padding-top: 10rem;
+}
 
-	&__wrapper { // <div>
+.product-list {
+	width: 70rem;
+	height: 30rem;
+	position: relative;
+	margin: 0 auto 0 auto;
+	padding-left: 0;
+	
+	&.slick-dotted.slick-slider {
+		margin-bottom: 0;
+	}
+	
+	.slick-arrow:before {
+		color: black;
+	}
+	
+	.slick-prev {
+		left: -7rem;
+	}
+	
+	.slick-next {
+		right: -7rem;
+	}
+	
+	.slick-dots {
+		top: 40rem;
+	}
+}
+
+.product-card {
+	// <div>
+	width: 35rem;
+	height: 40rem;
+	padding-bottom: 1rem;
+	
+	&__container {
+		width: 35rem;
+		margin-right: auto;
+		margin-left: auto;
+		padding-top: 2rem;
+	}
+	
+	&__wrapper {
+		// <div>
 		padding: 2rem 2rem 2rem 3rem;
 		display: flex;
+		min-height: 27.5rem;
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.18);
 	}
-
-	&__infos { // <div>
+	
+	&__infos {
+		// <div>
 		width: 70%;
 	}
-
-	&__date { // <p>
+	
+	&__date {
+		// <p>
 		font-family: ivypresto-text, serif;
 		font-size: 4.5rem;
 		font-style: italic;
@@ -22,36 +66,39 @@
 		margin-top: 0;
 		margin-bottom: 0;
 	}
-
-	&__title { // <h3>, <h4>
+	
+	&__title {
+		// <h3>, <h4>
 		font-size: 2.5rem;
 		font-weight: 400;
 		margin-top: 2rem;
 		margin-bottom: 0;
-
+		
 		& + h4 {
 			font-style: italic;
 			margin-top: 0;
 		}
 	}
-
-	&__composition { // <p>
+	
+	&__composition {
+		// <p>
 		font-family: azo-sans-web, sans-serif;
 		font-size: 1.4rem;
 		margin-bottom: 2.4rem;
 	}
 	
-	&__image { // <div
+	&__image {
+		// <div
 		width: 30%;
 		margin-bottom: -15%;
-
+		
 		img {
 			width: 100%;
 			position: relative;
 			top: 10%;
 		}
 	}
-
+	
 	&.dark {
 		color: $white;
 	}
