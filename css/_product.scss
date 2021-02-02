@@ -13,9 +13,13 @@ body {
 		margin-bottom: 0;
 	}
 	
-	.slick-arrow:before {
-		color: black;
-		opacity: 1;
+	.slick-arrow {
+		z-index: 11;
+
+		&:before {
+			color: black;
+			opacity: 1;
+		}
 	}
 	
 	.slick-prev {
@@ -35,6 +39,7 @@ body {
 	width: 35rem;
 	height: 40rem;
 	padding-bottom: 1rem;
+	outline: none;
 	
 	&__container {
 		width: 35rem;
