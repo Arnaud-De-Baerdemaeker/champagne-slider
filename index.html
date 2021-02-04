@@ -13,6 +13,22 @@
 	
 	<body class="dark_mode"> <!-- Delete class "dark_mode" for light mode -->
 		<script src="https://use.fontawesome.com/c3352fdb8d.js"></script>
+		
+		<div class="slicknav">
+			<div class="slicknav__wrapper">
+
+				<a href="" class="slicknav__item prev">
+					<i class="fa fa-chevron-left icon" aria-hidden="true"></i>
+				</a>
+				<a href="" class="slicknav__item next">
+					<div class="timer">
+						<div class="mask">
+						</div>
+					</div>
+					<i class="fa fa-chevron-right icon" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
 
 		<ul class="product-list">
 			<div class="product-card">
@@ -200,7 +216,11 @@
 			$(document).ready(function(){
 				$('.product-list').slick({
 					dots: true,
-					arrows: true
+					arrows: true,
+					prevArrow: $(".prev"),
+					nextArrow: $(".next"),
+					autoplay: true,
+ 					autoplaySpeed: 7000,
 				});
 
 				$('.product-card__image img').hide();
