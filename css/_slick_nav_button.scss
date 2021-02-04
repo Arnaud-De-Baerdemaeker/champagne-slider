@@ -1,5 +1,6 @@
 .slicknav{
     position: absolute;
+    z-index: 10;
     width: 100%;
     &__wrapper{
         display: flex;
@@ -38,6 +39,7 @@
         }
 
         &:hover{
+            cursor: pointer;
             i{
                 color: $white;
             }

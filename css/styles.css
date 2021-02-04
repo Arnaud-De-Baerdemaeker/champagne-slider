@@ -67,6 +67,7 @@ body {
 .product-list {
   width: 70rem;
   position: relative;
+  z-index: 5;
   margin: 0 auto 0 auto;
   padding-left: 0;
 }
@@ -269,6 +270,7 @@ body.dark_mode .black {
 
 .slicknav {
   position: absolute;
+  z-index: 10;
   width: 100%;
 }
 
@@ -311,6 +313,10 @@ body.dark_mode .black {
 
 .slicknav__item.next i {
   margin-left: .2rem;
+}
+
+.slicknav__item:hover {
+  cursor: pointer;
 }
 
 .slicknav__item:hover i {
