@@ -329,8 +329,8 @@ body.dark_mode .black {
   background: linear-gradient(90deg, black 50%, #FCCB66 50%);
   -webkit-animation-name: timer;
           animation-name: timer;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 4.5s;
+          animation-duration: 4.5s;
   -webkit-animation-timing-function: steps(200, start);
           animation-timing-function: steps(200, start);
   -webkit-animation-iteration-count: infinite;
@@ -358,8 +358,8 @@ body.dark_mode .black {
   width: 50%;
   -webkit-animation-name: mask;
           animation-name: mask;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 4.5s;
+          animation-duration: 4.5s;
   -webkit-animation-timing-function: steps(100, start);
           animation-timing-function: steps(100, start);
   -webkit-animation-iteration-count: infinite;
