@@ -327,17 +327,23 @@ body.dark_mode .black {
   width: 100%;
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, black), color-stop(50%, #FCCB66));
   background: linear-gradient(90deg, black 50%, #FCCB66 50%);
-  -webkit-animation: timer 7s steps(200, start) infinite;
-          animation: timer 7s steps(200, start) infinite;
+  -webkit-animation-name: timer;
+          animation-name: timer;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: steps(200, start);
+          animation-timing-function: steps(200, start);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .slicknav__item .timer:after {
   content: "";
   position: absolute;
-  width: 90%;
-  height: 90%;
-  left: 5%;
-  top: 5%;
+  width: 5.6rem;
+  height: 5.6rem;
+  left: .3rem;
+  top: .3rem;
   border-radius: 100%;
   background: black;
 }
@@ -350,10 +356,26 @@ body.dark_mode .black {
   position: absolute;
   top: 0;
   width: 50%;
-  -webkit-animation: mask 7s steps(100, start) infinite;
-          animation: mask 7s steps(100, start) infinite;
+  -webkit-animation-name: mask;
+          animation-name: mask;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: steps(100, start);
+          animation-timing-function: steps(100, start);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   -webkit-transform-origin: 100% 50%;
           transform-origin: 100% 50%;
+}
+
+.pause {
+  -webkit-animation-play-state: paused !important;
+          animation-play-state: paused !important;
+}
+
+.product:hover .mask, .product:hover .timer {
+  -webkit-animation-play-state: paused !important;
+          animation-play-state: paused !important;
 }
 
 @-webkit-keyframes timer {
@@ -376,12 +398,12 @@ body.dark_mode .black {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  50% {
+  49.99% {
     background: #FCCB66;
     -webkit-transform: rotate(-180deg);
             transform: rotate(-180deg);
   }
-  50.01% {
+  50% {
     background: black;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -399,12 +421,12 @@ body.dark_mode .black {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  50% {
+  49.99% {
     background: #FCCB66;
     -webkit-transform: rotate(-180deg);
             transform: rotate(-180deg);
   }
-  50.01% {
+  50% {
     background: black;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);

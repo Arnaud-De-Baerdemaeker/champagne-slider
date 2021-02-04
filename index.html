@@ -220,7 +220,8 @@
 					prevArrow: $(".prev"),
 					nextArrow: $(".next"),
 					autoplay: true,
- 					autoplaySpeed: 7000,
+					autoplaySpeed: 3000,
+					pauseOnHover: false
 				});
 
 				$('.product-card__image img').hide();
@@ -230,6 +231,8 @@
   
   				// On before slide change
   				$('.product-list').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+					$(".timer, .mask").removeClass("run").addClass("pause");
+					
 					$('.slick-active').find('.product-card__wrapper img').fadeOut(1000);
 					gsap.to(".slick-active .ingredients-list__item", {opacity: 0, y: -10});
 					gsap.to(".slick-active .product-card__title", {opacity: 0, y: -10});
@@ -237,10 +240,19 @@
   
   				// On after slide change
   				$('.product-list').on('afterChange', function(event, slick, currentSlide) {
+					$(".timer, .mask").removeClass("pause").addClass("run");
+					$('.timer').remove().clone().appendTo('.next');
+					$('.mask').remove().clone().appendTo('.timer');
 					$('.slick-active').find('.product-card__wrapper img').fadeIn(200);
 					gsap.to(".slick-active .ingredients-list__item", {duration: 0.3, y: 0, opacity: 1, stagger: 0.1});
 					gsap.to(".slick-active .product-card__title", {duration: 0.3, y: 0, opacity: 1, stagger: 0.1});
 				});
+
+				// $('.product-list, .slick-arrow').mouseenter( function(){
+				// 	$(".timer, .mask").removeClass("run").addClass("pause");
+				// }).mouseleave(function(){
+				// 	$(".timer, .mask").removeClass("pause").addClass("run");
+				// });
 
 			});
 		</script>
